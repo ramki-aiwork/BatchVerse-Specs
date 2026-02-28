@@ -5,7 +5,8 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
-import ProfileScreen from './src/screens/ProfileScreen'; // Added Import
+import ProfileScreen from './src/screens/ProfileScreen';
+import DirectoryScreen from './src/screens/DirectoryScreen'; // New Import
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,12 @@ export default function App() {
           <Stack.Screen 
             name="Profile" 
             component={ProfileScreen} 
-            options={{ title: 'My Profile' }} // Show header
+            options={{ title: 'My Profile' }}
+          />
+          <Stack.Screen 
+            name="Directory" 
+            component={DirectoryScreen} 
+            options={{ title: 'Batch Directory' }}
           />
         </Stack.Navigator>
       </NavigationContainer>

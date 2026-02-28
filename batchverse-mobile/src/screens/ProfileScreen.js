@@ -104,6 +104,15 @@ const ProfileScreen = ({ route, navigation }) => {
 
       <Button 
         mode="outlined" 
+        onPress={() => navigation.navigate('Directory', { token })}
+        style={styles.dirButton}
+        color="blue"
+      >
+        Browse Directory
+      </Button>
+
+      <Button 
+        mode="text" 
         onPress={() => navigation.navigate('Login')}
         style={styles.logoutButton}
         color="red"
@@ -147,8 +156,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingVertical: 6,
   },
-  logoutButton: {
+  dirButton: {
     marginTop: 20,
+    borderColor: 'blue',
+  },
+  logoutButton: {
+    marginTop: 10,
     borderColor: 'red',
   },
 });

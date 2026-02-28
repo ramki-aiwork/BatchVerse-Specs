@@ -1,5 +1,5 @@
 // profile.js - Profile API Integration
-const API_URL = 'http://127.0.0.1:7073/api';
+const API_URL = 'http://127.0.0.1:7074/api';
 
 export const getProfile = async (token) => {
   try {
